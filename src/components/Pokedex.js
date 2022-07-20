@@ -1,12 +1,19 @@
 import React from "react";
 
-const Pokedex = () => {
+const Pokedex = (props) => {
+  const { pokemonList, loading } = props;
   return (
     <div>
       <div className="pokedex-header">
         <h1>Pokédex</h1>
       </div>
-      <div>AAAA</div>
+      <div>
+        {loading ? (
+          <div>Carregando...</div>
+        ) : (
+          <div className="pokedex-grid"></div>
+        )}
+      </div>
     </div>
   )
 }

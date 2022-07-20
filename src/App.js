@@ -21,13 +21,13 @@ function App() {
 
   useEffect(() => {
     fetchPokemon();
-  }, [pokemonList]);
+  }, []);
 
   return (
     <div>
       <Navbar />
       <div className="App">
-        <Pokedex pokemonList = {pokemonList} loading = {loading} />
+        <Pokedex pokemonList = {pokemonList.results} loading = {loading} />
       </div>
     </div>
   );

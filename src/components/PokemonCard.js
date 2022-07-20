@@ -2,6 +2,9 @@ import React from "react";
 
 const PokemonCard = (props) => {
   const { pokemon } = props;
+  let pokemonWeightInKg = (pokemon.weight * 0.1).toFixed(1);
+  let pokemonHeightInMeters = (pokemon.height * 0.1).toFixed(1);
+
   return(
     <div className="pokemon-card">
       <div className="pokemon-image-container">  
@@ -24,7 +27,8 @@ const PokemonCard = (props) => {
           })}
         </div>
         <div className="pokemon-aditional-info">
-
+            <p>altura: {pokemonHeightInMeters} m</p>
+            <p>peso: {pokemonWeightInKg} kg</p>
         </div>
       </div>
     </div>

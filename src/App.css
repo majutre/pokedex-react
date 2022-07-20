@@ -28,17 +28,10 @@ nav {
 }
 
 .searchbar-container {
-  /* display: flex;
-  flex-direction: row; */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
-
-.searchbar {
-  
-}
-.searchbar input {
-  
-}
-
 
 .pokedex-header {
   justify-content: space-between;
@@ -113,7 +106,7 @@ nav {
 }
 
 .pagination-btn:hover {
-  color: #3B3B3B;
+  color: #6e6e6e;
 }
 
 @media (max-width: 480px) {

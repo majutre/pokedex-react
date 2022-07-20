@@ -1,4 +1,6 @@
 import React from "react";
+import SearchBar from "./SearchBar";
+
 
 const Navbar = () => {
   const logoImg =
@@ -8,6 +10,7 @@ const Navbar = () => {
       <div>
         <img alt="pokeapi-logo" src={logoImg} className="navbar-logo" />
       </div>
+      <SearchBar />
     </nav>
   );
 };

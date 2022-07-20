@@ -95,6 +95,19 @@ nav {
   color: #3B3B3B;
 }
 
+.searchbar-container {
+  display: flex;
+  flex-direction: row;
+  float: inline-end;
+}
+
+.searchbar {
+  
+}
+.searchbar input {
+  
+}
+
 @media (max-width: 480px) {
   .pokedex-grid { grid-template-columns: repeat(1, 1fr); }
 }

@@ -1,4 +1,4 @@
-export const listPokemon = async (limit = 50, offset = 25) => {
+export const listPokemon = async (limit = 10, offset = 25) => {
   try {
     let url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
     const response = await fetch(url)

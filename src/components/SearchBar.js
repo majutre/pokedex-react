@@ -1,24 +1,21 @@
 import React, { useState } from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import PokemonCard from "./PokemonCard";
-import { searchPokemon } from "../assets/api";
+import { TbPokeball } from "react-icons/tb";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   const [search, setSearch] = useState();
-  const [pokemon, setPokemon] = useState();
+  const {onSearch} = props
 
   const onChangeHandler = (event) => {
     setSearch(event.target.value);
+    if(event.target.value.length === 0) {
+      onSearch(undefined)
+    }
   }
 
   const onButtonClickHandler = () => {
-    onSearchHandler(search);
-  }
-
-  const onSearchHandler = async (pokemon) => {
-    const result = await searchPokemon(pokemon);
-    setPokemon(result)
+    onSearch(search);
   }
 
   return (
@@ -27,14 +24,8 @@ const SearchBar = () => {
         <Form.Group>
           <Form.Control type="text" placeholder="Pesquisar Pokémon" onChange={onChangeHandler}/>
         </Form.Group>
-        <Button onClick={onButtonClickHandler}>asdsadas</Button>
+        <Button onClick={onButtonClickHandler}>Buscar <TbPokeball /></Button>
       </div>
-      {pokemon ? (
-        <div>
-          <PokemonCard pokemon={pokemon}/>
-        </div>
-      ) : null
-      }
     </div>
   )
 }

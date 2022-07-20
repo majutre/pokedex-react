@@ -4,6 +4,7 @@ import "./App.css";
 import { listPokemon, getPokemonDataByUrl } from "./assets/api";
 import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [page, setPage] = useState(0);
@@ -36,7 +37,13 @@ function App() {
 
   return (
     <div>
-      <Navbar />
+      <nav>
+        <Navbar />
+        <div>
+          <SearchBar />
+        </div>
+        <div className="navbar-placeholder"></div>
+      </nav>
       <div className="App">
         <Pokedex
           pokemonList={pokemonList}

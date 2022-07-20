@@ -7,10 +7,13 @@ const Navbar = () => {
     "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png";
   return (
     <nav>
-      <div>
+      <div className="navbar-logo-container">
         <img alt="pokeapi-logo" src={logoImg} className="navbar-logo" />
       </div>
-      <SearchBar />
+      <div>
+        <SearchBar />
+      </div>
+      <div className="navbar-placeholder"></div>
     </nav>
   );
 };

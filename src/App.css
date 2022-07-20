@@ -26,8 +26,59 @@ nav {
   padding: 12px;
 }
 
+.pokedex-body {
+  display: inline-flex;
+  margin: 20px 30px;
+  align-items: center;
+  text-align: center;
+}
+
 .pokedex-grid {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.pokemon-card {
+
+  box-shadow: 4px (0, 0, 0, 0.25);
+  border-radius: 3px;
+  width: 400px;
+}
+
+.pokemon-image-container {
+  padding: 0px 10px;
+}
+
+.pokemon-image {
+  width: 150px;
+}
+
+.pokemon-card-title {
+  text-transform: capitalize;
+}
+
+.pokemon-card-title h3 {
+  margin-bottom: 6px;
+}
+
+.pokemon-card-body {
+  padding: 20px 10px 10px 2px;
+}
+
+.pokemon-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pokemon-type-text {
+  text-align: center;
+  margin-left: 15px;
+  text-transform: capitalize;
+}
+
+
+.pokemon-aditional-info {
+
 }

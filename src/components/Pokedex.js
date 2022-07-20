@@ -7,14 +7,14 @@ const Pokedex = (props) => {
 
   const onLeftClickHandler = () => {
     if (page > 0) {
-      setPage(page-1)
+      setPage(page - 1);
     }
-  }
+  };
   const onRightClickHandler = () => {
-    if (page+1 !== totalPages) {
-      setPage(page+1)
+    if (page + 1 !== totalPages) {
+      setPage(page + 1);
     }
-  }
+  };
   return (
     <div>
       <div className="pokedex-header">
@@ -31,21 +31,15 @@ const Pokedex = (props) => {
           <div>Carregando...</div>
         ) : (
           <div className="pokedex-grid">
-            { pokemonList && pokemonList.map(
-              (pokemon, index) => {
-                return (
-                  <PokemonCard 
-                    key={index} 
-                    pokemon={pokemon} 
-                  />
-                )
-              }
-            )}
+            {pokemonList &&
+              pokemonList.map((pokemon, index) => {
+                return <PokemonCard key={index} pokemon={pokemon} />;
+              })}
           </div>
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Pokedex;

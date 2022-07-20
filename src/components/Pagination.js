@@ -8,15 +8,15 @@ const Pagination = (props) => {
   const { page, totalPages, onLeftClick, onRightClick } = props;
   return (
     <div className="pagination-container">
-      <button onClick={onLeftClick}>
+      <span onClick={onLeftClick} className="pagination-btn">
         <BsFillArrowLeftCircleFill />
-      </button>
+      </span>
       <div>
         {page} de {totalPages}
       </div>
-      <button onClick={onRightClick}>
+      <span onClick={onRightClick} className="pagination-btn">
         <BsFillArrowRightCircleFill />
-      </button>
+      </span>
     </div>
   );
 };

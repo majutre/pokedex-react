@@ -1,4 +1,6 @@
 import React from "react";
+import { FaWeightHanging } from "react-icons/fa";
+import { GiBodyHeight } from "react-icons/gi";
 
 const PokemonCard = (props) => {
   const { pokemon } = props;
@@ -29,8 +31,8 @@ const PokemonCard = (props) => {
           })}
         </div>
         <div className="pokemon-aditional-info">
-          <p>altura: {pokemonHeightInMeters} m</p>
-          <p>peso: {pokemonWeightInKg} kg</p>
+          <p className="mb-0 mt-1"><GiBodyHeight className="mb-1 mx-2"/>{pokemonHeightInMeters} m</p>
+          <p><FaWeightHanging className="mb-1 mx-1"/> {pokemonWeightInKg} kg</p>
         </div>
       </div>
     </div>

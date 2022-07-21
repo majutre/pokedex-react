@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import { TbPokeball } from "react-icons/tb";
 
 const SearchBar = (props) => {
@@ -24,7 +23,7 @@ const SearchBar = (props) => {
         <Form.Group>
           <Form.Control type="text" placeholder="Pesquisar Pokémon" onChange={onChangeHandler}/>
         </Form.Group>
-        <Button onClick={onButtonClickHandler} className="searchbar-btn shadow-none" >Buscar <TbPokeball className="red" /></Button>
+        <button onClick={onButtonClickHandler} className="searchbar-btn btn shadow-none" >Buscar <TbPokeball className="red" /></button>
       </div>
     </div>
   )

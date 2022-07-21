@@ -8,15 +8,15 @@ const PokemonCard = (props) => {
   let pokemonHeightInMeters = (pokemon.height * 0.1).toFixed(1);
 
   return (
-    <div className="pokemon-card"  className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-      <div className="pokemon-image-container">
+    <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 pokemon-card">
+      <div className={"pokemon-image-container background-" + pokemon.types[0].type.name}>
         <img
           alt={pokemon.name}
           src={pokemon.sprites.front_default}
           className="pokemon-image"
         />
       </div>
-      <div className="pokemon-card-title">
+      <div className="pokemon-card-title mt-3">
         <h3>{pokemon.name}</h3>
         <span># {pokemon.id}</span>
       </div>
@@ -24,7 +24,7 @@ const PokemonCard = (props) => {
         <div className="pokemon-type">
           {pokemon.types.map((item, index) => {
             return (
-              <div key={index} className="pokemon-type-text">
+              <div key={index} className={"px-2 pokemon-type-text background-" + item.type.name}>
                 {item.type.name}
               </div>
             );

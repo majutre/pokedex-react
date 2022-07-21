@@ -4,6 +4,7 @@ import PokemonCard from "./PokemonCard";
 
 const Pokedex = (props) => {
   const { pokemonList, loading, page, totalPages, setPage } = props;
+  const pokedexLogoImg = "/pokedexlogo.png";
 
   const onLeftClickHandler = () => {
     if (page > 0) {
@@ -18,7 +19,7 @@ const Pokedex = (props) => {
   return (
     <div>
       <div className="pokedex-header">
-        <h1>Pokédex</h1>
+        <img alt="pokedex-logo" src={pokedexLogoImg} className="pokedex-logo" />
         <Pagination
           page={page + 1}
           totalPages={totalPages}

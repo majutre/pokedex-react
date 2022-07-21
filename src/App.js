@@ -5,7 +5,6 @@ import { listPokemon, getPokemonDataByUrl, searchPokemon } from "./assets/api";
 import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
 import SearchBar from "./components/SearchBar";
-import PokemonCard from "./components/PokemonCard";
 
 function App() {
   const [page, setPage] = useState(0);
@@ -38,7 +37,7 @@ function App() {
   }, [page]);
 
   const onSearchHandler = async (pokemon) => {
-    if (pokemon == '') {
+    if (pokemon === '') {
       fetchPokemon();
     }
 
@@ -50,22 +49,34 @@ function App() {
       setLoading(false);
       setNotFound(true);
     } else {
-      setPokemonList([result])
+      setPokemonList([result]);
+      setPage(0);
+      setTotalPages(1);
     }
-    setLoading(false)
+    setLoading(false);
   };
 
+  const redirectToPokedex = () => {
+    setNotFound(false);
+    fetchPokemon();
+  }
+
   return (
-    <div>
+    <div className="container">
       <nav>
-        <Navbar />
+        <Navbar onClick={redirectToPokedex}/>
         <div>
           <SearchBar onSearch={onSearchHandler} />
         </div>
         <div className="navbar-placeholder"></div>
       </nav>
       {notFound ? (
-        <div> AAAAAA </div>
+        <div>
+          <div className="alert alert-secondary mt-5"> 
+            Nenhum Pokémon encontrado :( 
+          </div>
+          <button onClick={redirectToPokedex} className="redirect-btn">Voltar</button>
+        </div>
       ) : (
         <Pokedex
           pokemonList={pokemonList}

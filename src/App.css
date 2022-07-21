@@ -75,7 +75,8 @@ nav {
 }
 
 .pokedex-body {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   margin: 20px 30px;
   align-items: center;
@@ -86,11 +87,12 @@ nav {
   width: 310px;
   height: 480px;
   margin: 5px;
-  padding: 25px 10px 5px 10px;
+  padding: 10px 10px 5px 10px;
   border: 10px solid gold;
   border-radius: 20px;
   background-color: #b5c327;
   background-image: linear-gradient(315deg, #b5c327 0%, #ffc907 74%);
+  font-family: 'Roboto Mono', monospace;
 }
 
 .pokemon-image-container {
@@ -110,11 +112,14 @@ nav {
 }
 .pokemon-card-title {
   text-transform: capitalize;
-}
-
-.pokemon-card-title h3 {
   margin-bottom: 6px;
 }
+
+.pokemon-card-title h3{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
 
 .pokemon-card-body {
   padding: 20px 10px 10px 2px;

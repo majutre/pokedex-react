@@ -50,22 +50,15 @@ nav {
   color: #ededed;
 }
 
-.searchbar-btn:active {
-  background-color: #444444;
-  border-color: #ededed;
-}
-
+.searchbar-btn:active,
 .searchbar-btn:focus {
   background-color: #444444;
   border-color: #ededed;
-  outline: thin dotted;
-  outline-color: #171717;
-  outline-offset: -2px;
-  box-shadow: #444444;
+  color: #ededed;
 }
 
 .container {
-  background-color: #EDEDED;
+  background-color: #ededed;
   padding: 0;
   padding: 0;
 }
@@ -96,6 +89,8 @@ nav {
   padding: 25px 10px 5px 10px;
   border: 10px solid gold;
   border-radius: 20px;
+  background-color: #b5c327;
+  background-image: linear-gradient(315deg, #b5c327 0%, #ffc907 74%);
 }
 
 .pokemon-image-container {
@@ -135,6 +130,10 @@ nav {
   text-transform: capitalize;
 }
 
+.pokemon-aditional-info {
+  font-size: 20px;
+}
+
 .pagination-container {
   display: flex;
   flex-direction: row;
@@ -163,19 +162,51 @@ nav {
 /* Styles by type */
 
 .background-water {
-  background: linear-gradient(to bottom right, #d9e4ec,#adc1d1,#7d99af,#557792,#7d99af,#adc1d1);
+  background: linear-gradient(
+    to bottom right,
+    #d9e4ec,
+    #adc1d1,
+    #7d99af,
+    #557792,
+    #7d99af,
+    #adc1d1
+  );
 }
 
 .background-electric {
-  background: linear-gradient(to bottom right, #ffffa4,#fff870,#fff200,#fff870,#ffffa4,#fff870);
+  background: linear-gradient(
+    to bottom right,
+    #ffffa4,
+    #fff870,
+    #fff200,
+    #fff870,
+    #ffffa4,
+    #fff870
+  );
 }
 
 .background-fire {
-  background: linear-gradient(to bottom right, #ffbfba,#ff978f,#ff756b,#ff594c,#ff756b,#ff978f);
+  background: linear-gradient(
+    to bottom right,
+    #ffbfba,
+    #ff978f,
+    #ff756b,
+    #ff594c,
+    #ff756b,
+    #ff978f
+  );
 }
 
 .background-grass {
-  background: linear-gradient(to bottom right, #aae5b7,#78cf8b,#4fb665,#319d49,#4fb665,#78cf8b);
+  background: linear-gradient(
+    to bottom right,
+    #aae5b7,
+    #78cf8b,
+    #4fb665,
+    #319d49,
+    #4fb665,
+    #78cf8b
+  );
 }
 
 .background-poison {
@@ -187,11 +218,21 @@ nav {
 }
 
 .background-flying {
-  background: linear-gradient(to bottom right, #c6b7f5 0%, #A890F0 50%, #6d5e9c 100%);
+  background: linear-gradient(
+    to bottom right,
+    #c6b7f5 0%,
+    #a890f0 50%,
+    #6d5e9c 100%
+  );
 }
 
 .background-normal {
-  background: linear-gradient(to bottom right, #C6C6A7 0%, #a8a878 50%, #6d6d4e 100%);
+  background: linear-gradient(
+    to bottom right,
+    #c6c6a7 0%,
+    #a8a878 50%,
+    #6d6d4e 100%
+  );
 }
 
 .background-ground {
@@ -199,32 +240,36 @@ nav {
 }
 
 .background-fairy {
-
+  background: linear-gradient(to bottom, #f4bdc9 0%, #ee99ac 50%, #9b6470 100%);
 }
+
 .background-fighting {
-
+  background: linear-gradient(to bottom, #d67873 0%, #c03028 50%, #7d1f1a 100%);
 }
+
 .background-ghost {
-
+  background: linear-gradient(to bottom, #a27dfa 0%, #705898 50%, #493963 100%);
 }
-.background-ice {
 
+.background-ice {
+  background: linear-gradient(to bottom, #bce6e6 0%, #98d8d8 50%, #638d8d 100%);
 }
 
 .background-rock {
-
+  background: linear-gradient(to bottom, #d1c17d 0%, #b8a038 50%, #786824 100%);
 }
 
 .background-psychic {
-
+  background: linear-gradient(to bottom, #fa92b2 0%, #f85888 50%, #a13959 100%);
 }
 
+.background-dragon {
+  background: linear-gradient(to bottom, #a27dfa 0%, #7038f8 50%, #4924a1 100%);
+}
 
-
-/* .pokemon-type-water {
-  background-color: blue;
-} */
-
+.background-steel {
+  background: linear-gradient(to bottom, #d1d1e0 0%, #b8b8d0 50%, #787887 100%);
+}
 
 /* Screen */
 @media (max-width: 480px) {

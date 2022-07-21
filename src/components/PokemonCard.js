@@ -8,7 +8,7 @@ const PokemonCard = (props) => {
   let pokemonHeightInMeters = (pokemon.height * 0.1).toFixed(1);
 
   return (
-    <div className="pokemon-card">
+    <div className="pokemon-card"  className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
       <div className="pokemon-image-container">
         <img
           alt={pokemon.name}

@@ -10,7 +10,7 @@ const SearchBar = (props) => {
   const onChangeHandler = (event) => {
     setSearch(event.target.value);
     if(event.target.value.length === 0) {
-      onSearch(undefined)
+      onSearch(undefined);
     }
   }
 
@@ -24,7 +24,7 @@ const SearchBar = (props) => {
         <Form.Group>
           <Form.Control type="text" placeholder="Pesquisar Pokémon" onChange={onChangeHandler}/>
         </Form.Group>
-        <Button onClick={onButtonClickHandler}>Buscar <TbPokeball /></Button>
+        <Button onClick={onButtonClickHandler} className="searchbar-btn shadow-none" >Buscar <TbPokeball className="red" /></Button>
       </div>
     </div>
   )

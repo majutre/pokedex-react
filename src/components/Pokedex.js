@@ -30,10 +30,10 @@ const Pokedex = (props) => {
         {loading ? (
           <div>Carregando...</div>
         ) : (
-          <div className="pokedex-grid">
+          <div className="d-flex row">
             {pokemonList &&
               pokemonList.map((pokemon, index) => {
-                return <PokemonCard key={index} pokemon={pokemon} />;
+                return <PokemonCard key={index} pokemon={pokemon}/>;
               })}
           </div>
         )}

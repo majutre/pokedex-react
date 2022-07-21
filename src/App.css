@@ -1,3 +1,5 @@
+/* https://colorhunt.co/palette/171717444444da0037ededed */
+
 * {
   margin: 0px;
   box-sizing: border-box;
@@ -13,9 +15,11 @@ nav {
   justify-content: center;
   flex-direction: row;
   margin: 16px;
+  background-color: #ededed;
+  padding: 12px;
 }
 
-.navbar-logo, 
+.navbar-logo,
 .navbar-placeholder {
   width: 150px;
 }
@@ -33,6 +37,29 @@ nav {
   gap: 10px;
 }
 
+.searchbar-btn {
+  background-color: #171717;
+  border-color: #444444;
+  color: #ededed;
+}
+
+.searchbar-btn:hover {
+  background-color: #444444;
+}
+
+.searchbar-btn:active {
+  background-color: #444444;
+  border-color: #ededed;
+}
+.searchbar-btn:focus {
+  background-color: #444444;
+  border-color: #ededed;
+  outline: thin dotted;
+  outline-color: #171717;
+  outline-offset: -2px;
+  box-shadow: #444444;
+}
+
 .pokedex-header {
   justify-content: space-between;
   align-items: center;
@@ -46,12 +73,6 @@ nav {
   margin: 20px 30px;
   align-items: center;
   text-align: center;
-}
-
-.pokedex-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .pokemon-card {
@@ -109,21 +130,29 @@ nav {
   color: #6e6e6e;
 }
 
+.red {
+  color: #da0037;
+}
+
 @media (max-width: 480px) {
-  .pokedex-grid { grid-template-columns: repeat(1, 1fr); }
+  .searchbar-container {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 780px) {
-  nav { flex-direction: column; text-align: center; justify-content: center;}
-  .navbar-logo-container { margin: 16px 0;}
-  .navbar-placeholder { display: none;}
-  .pokedex-grid { grid-template-columns: repeat(2, 1fr); }
+  nav {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .navbar-logo-container {
+    margin: 16px 0;
+  }
 }
 
 @media (max-width: 1200px) {
-  .pokedex-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (min-width: 1200px) {
-  .pokedex-grid { grid-template-columns: repeat(4, 1fr); }
+  .navbar-placeholder {
+    display: none;
+  }
 }

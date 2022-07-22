@@ -12,12 +12,8 @@ const PokemonCard = (props) => {
   const imagePath = imageMissing ? "./which_pkmn.jpeg" : pokemon.sprites.front_default;
   const extendImage = imageMissing ? " pokemon-card-extend-image" : "";
 
-  // const onButtonClickHandler = () => {
-  //   render(<PokemonProfileModal />) 
-  // }
-
   return (
-    <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 pokemon-card">
+    <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 pokemon-card" onClick={() => setShow(true)}>
         <h6 className="text-end mb-3"># {pokemon.id} </h6>
       <div
         className={
@@ -29,6 +25,11 @@ const PokemonCard = (props) => {
           alt={pokemon.name}
           src={imagePath}
           className={"pokemon-image" + extendImage}
+          onError={({ currentTarget }) => {
+            currentTarget.onerror = null;
+            currentTarget.src="./which_pkmn.jpeg";
+            currentTarget.className="pokemon-image pokemon-card-extend-image";
+          }}
         />
       </div>
       <div className="pokemon-card-title mt-3">
@@ -40,9 +41,7 @@ const PokemonCard = (props) => {
             return (
               <div
                 key={index}
-                className={
-                  "px-2 pokemon-type-text background-" + item.type.name
-                }
+                className={ "px-2 pokemon-type-text background-" + item.type.name }
               >
                 {item.type.name}
               </div>
@@ -60,8 +59,7 @@ const PokemonCard = (props) => {
           </p>
         </div>
 
-        <button onClick={() => setShow(true)}>CLICK ME</button>
-        <PokemonProfileModal show={show} onHide={() => setShow(false)} />
+        <PokemonProfileModal show={show} onHide={() => setShow(false)} pokemon={pokemon} />
       </div>
     </div>
   );

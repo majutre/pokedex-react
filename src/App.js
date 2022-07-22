@@ -10,8 +10,9 @@ function App() {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [notFound, setNotFound] = useState(false);
   const [pokemonList, setPokemonList] = useState([]);
+  const [notFound, setNotFound] = useState(false);
+
   const itemsPerPage = 10;
   const offset = itemsPerPage * page;
 
@@ -72,10 +73,10 @@ function App() {
       </nav>
       {notFound ? (
         <div>
-          <div className="alert alert-secondary mt-5"> 
-            Nenhum Pokémon encontrado :( 
+          <div className="alert alert-secondary mt-5">
+            Nenhum Pokémon encontrado :(
           </div>
-          <button onClick={redirectToPokedex} className="redirect-btn">Voltar</button>
+          <button onClick={redirectToPokedex} className="redirect-btn btn">Voltar</button>
         </div>
       ) : (
         <Pokedex
@@ -85,7 +86,7 @@ function App() {
           setPage={setPage}
           totalPages={totalPages}
         />
-      )}
+        )}
     </div>
   );
 }

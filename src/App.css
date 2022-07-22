@@ -95,6 +95,10 @@ nav {
   font-family: 'Roboto Mono', monospace;
 }
 
+.pokemon-card h6 {
+  font-weight: 700;
+}
+
 .pokemon-image-container {
   margin-left: 10px;
   border: 5px yellow outset;

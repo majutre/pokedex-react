@@ -93,6 +93,7 @@ nav {
   background-color: #b5c327;
   background-image: linear-gradient(315deg, #b5c327 0%, #ffc907 74%);
   font-family: "Roboto Mono", monospace;
+  cursor: pointer;
 }
 
 .pokemon-card h6 {

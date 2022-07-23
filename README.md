@@ -1,6 +1,7 @@
 # Pokédex - PokeAPI
 
 Projeto desenvolvido em [React](https://github.com/facebook/create-react-app).
+[Backend](https://pokedex-request.herokuapp.com/).
 
 ## Configuração
 

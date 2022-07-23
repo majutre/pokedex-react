@@ -2,7 +2,7 @@
 
 Projeto desenvolvido em [React](https://github.com/facebook/create-react-app).
 
-[Backend](https://pokedex-request.herokuapp.com/).
+[Backend](https://pokedex-request.herokuapp.com/); [Projeto](https://github.com/majutre/pokedex-request)
 
 ## Configuração
 

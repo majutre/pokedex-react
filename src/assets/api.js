@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000'
+const API_URL = 'https://pokedex-request.herokuapp.com'
 
 export const listPokemon = async (limit = 10, offset = 25) => {
   try {

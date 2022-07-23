@@ -1,6 +1,8 @@
+const API_URL = 'http://localhost:5000'
+
 export const listPokemon = async (limit = 10, offset = 25) => {
   try {
-    let url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
+    let url = `${API_URL}/pokemon/${limit}/${offset}`
     const response = await fetch(url)
     return await response.json()
   } catch (error) {
@@ -19,7 +21,7 @@ export const getPokemonDataByUrl = async (url) => {
 
 export const searchPokemon = async (pokemon) => {
   try {
-    let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+    let url = `${API_URL}/search/${pokemon}`
     const response = await fetch(url)
     return await response.json()
   } catch (error) {
